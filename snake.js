@@ -1,12 +1,12 @@
 function Snake() {
-    var x, y = 0;                   //Initial Snake cords
-    var vx = 1;                     //Initial X Velocity
-    var vy = 0;                     //Initial Y Velocity
-    var sVec = createVector(x, y);  //Cords of head of snake
+    var x, y = 0; //Initial Snake cords
+    var vx = 1; //Initial X Velocity
+    var vy = 0; //Initial Y Velocity
+    var sVec = createVector(x, y); //Cords of head of snake
     var length = 0;
 
-    var tailX = [];                 //Tracks cords of snake tail: X Cords
-    var tailY = [];                 //Tracks cords of snake tail: Y Cords
+    var tailX = []; //Tracks cords of snake tail: X Cords
+    var tailY = []; //Tracks cords of snake tail: Y Cords
 
     this.show = function (size) {
         fill(255);
@@ -28,7 +28,7 @@ function Snake() {
         vy = nY;
     }
 
-    this.drawTail = function () {           
+    this.drawTail = function () {
         fill(255);
         if (tailX.length > length) {
             tailX.shift();
@@ -67,7 +67,7 @@ function Snake() {
             length++;
         }
     }
-    
+
     this.reset = function () {
         sVec.x = 0;
         sVec.y = 0;
@@ -90,12 +90,12 @@ function Snake() {
     this.getTailY = function (index) {
         return tailY[index];
     }
-    
-    this.getLocX = function() {
+
+    this.getLocX = function () {
         return sVec.x;
     }
-    
-    this.getLocY = function() {
+
+    this.getLocY = function () {
         return sVec.y;
     }
 
